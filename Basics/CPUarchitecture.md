@@ -114,7 +114,7 @@
   - Details zu Buffer Overflows und Stack-Schutz werden in späteren Aufgaben behandelt
 
 <a href="">
-    <img src="img/52a0b7ce5d0fe5389e3d2f4ddd000de1.png" alt="Memory" align="right">
+    <img src="img/52a0b7ce5d0fe5389e3d2f4ddd000de1.png" alt="Memory" align="right" width="370px">
 </a>
 
 </div>
