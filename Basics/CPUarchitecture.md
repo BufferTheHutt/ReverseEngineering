@@ -9,10 +9,12 @@
 ## Register-Typen
 
 - **Instruction Pointer (IP / EIP / RIP)**
+
   - Enthält die Adresse der nächsten auszuführenden Anweisung
   - Ursprünglich 16-Bit (Intel 8086), 32-Bit (EIP) in 32-Bit-Systemen, 64-Bit (RIP) in 64-Bit-Systemen
 
 - **General-Purpose Registers (Allgemeine Register)**
+
   - 32-Bit-Register in x86-Systemen, 64-Bit-Register in 64-Bit-Systemen
   - **EAX / RAX**: Accumulator Register, speichert Ergebnisse arithmetischer Operationen
     - 16-Bit: AX, 8-Bit: AL (niedrig), AH (hoch)
@@ -31,6 +33,7 @@
   - **EDI / RDI**: Destination Index Register, verwendet für String-Operationen
     - 32-Bit (EDI), 64-Bit (RDI)
   - **R8-R15**: 64-Bit-Register, nur in 64-Bit-Systemen vorhanden
+
     - 32-Bit: R8D, 16-Bit: R8W, 8-Bit: R8B
 
     <a href="">
@@ -39,7 +42,6 @@
 
 </div>
 
-
 <div style="flex: 1;">
 
 ## Hinweise
@@ -47,11 +49,6 @@
 - **Suffixe für Adressierung:** D = Double-word, W = Word, B = Byte
 
 </div>
-
-
-
-
-
 
 <div style="flex: 1;">
     <strong>Status-Flag-Register</strong>
@@ -85,6 +82,7 @@
 ## Überblick
 
 - **Abstraktion des Speichers**
+
   - Programme sehen eine abstrahierte Sicht des Speichers
   - Zugriff auf den gesamten Speicher ist nicht möglich, nur auf den eigenen Bereich
   - Details der Abstraktion werden hier nicht behandelt
@@ -96,14 +94,17 @@
 ## Sektionen im Speicher
 
 - **Code**
+
   - Enthält den Programmcode (Text-Sektion in einer Portable Executable Datei)
   - Hat Ausführungsrechte; CPU kann die Daten in diesem Abschnitt ausführen
 
 - **Data**
+
   - Beinhaltet initialisierte, konstante Daten (Global-Variablen und andere unveränderliche Daten)
   - Referenziert die Daten-Sektion in einer Portable Executable Datei
 
 - **Heap**
+
   - Auch als dynamischer Speicher bekannt
   - Beinhaltet Variablen und Daten, die während der Programmausführung erstellt und gelöscht werden
   - Speicher wird zur Laufzeit zugewiesen und freigegeben
@@ -119,6 +120,63 @@
 
 </div>
 
+<div>
+
+# Beispiel am Code
+
+## Code
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int global_var = 10; // Globale Variable
+
+    void function(int param) {
+    int local_var = 20; // Lokale Variable
+    int* heap_var = (int*)malloc(sizeof(int)); // Dynamisch zugewiesene Variable
+
+    *heap_var = 30;
+
+    printf("Parameter: %d\n", param);
+    printf("Lokale Variable: %d\n", local_var);
+    printf("Heap Variable: %d\n", *heap_var);
+
+    free(heap_var); // Speicher freigeben
+    }
+
+    int main() {
+    int main_var = 40; // Lokale Variable in main()
+
+    function(main_var);
+    return 0;
+    }
+
+### Erklärung
+
+Speicherbereiche
+
+**Code-Bereich**
+Enthält: Den ausführbaren Code der Funktionen (main, function, und alle verwendeten Funktionen wie printf).
+Speicherort: Hier wird der Programmcode gespeichert, der von der CPU ausgeführt wird.
+
+**Data-Bereich**
+Enthält: Globale Variablen und statische Variablen.
+Beispiel: global_var wird hier gespeichert.
+Speicherort: Dieser Bereich enthält Daten, die während der gesamten Programmausführung konstant bleiben.
+
+**Heap**
+Enthält: Dynamisch zugewiesener Speicher, der zur Laufzeit erstellt und gelöscht wird.
+Beispiel: Die Variable heap_var, die mit malloc erstellt wird.
+Speicherort: Wird verwendet, wenn dynamischer Speicherbedarf besteht und der Speicher zur Laufzeit zugewiesen wird.
+
+**Stack**
+Enthält: Lokale Variablen, Funktionsargumente, Rücksprungadressen und der Base Pointer.
+Beispiel:
+In der main() Funktion: main_var wird hier gespeichert.
+In der function(int param): local_var und param werden hier gespeichert. Außerdem werden beim Funktionsaufruf die Rücksprungadresse und der alte Base Pointer auf den Stack gelegt.
+Speicherort: Der Stack wächst und schrumpft dynamisch, während Funktionen aufgerufen und verlassen werden. Es wird für temporäre Daten verwendet, die während der Funktionsausführung benötigt werden.
+
+</div>
 
 <div>
 
@@ -134,6 +192,7 @@
 ## Funktionsweise des Stacks
 
 - **Prinzip**
+
   - Last In First Out (LIFO): Das zuletzt hinzugefügte Element wird zuerst entfernt
   - Beispiel: A, B, C auf den Stack legen → Entfernen in der Reihenfolge C, B, A
 
@@ -148,11 +207,13 @@
 ## Weitere Details
 
 - **Alter Base Pointer und Rücksprungadresse**
+
   - Unter dem Base Pointer: Alter Base Pointer des aufrufenden Programms
   - Darunter: Rücksprungadresse, die zeigt, wohin das Programm nach der Funktion zurückkehren soll
   - Technik zur Kontrolle übernahme: Stack Buffer Overflow
 
 - **Argumente**
+
   - Vor Funktionsstart auf den Stack gelegt
   - Direkt unter der Rücksprungadresse
 
@@ -169,6 +230,5 @@
 </a>
 
 </div>
-
 
 </div>
