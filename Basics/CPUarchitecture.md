@@ -2,7 +2,6 @@
 
 <div style="display: flex;">
 
-
 <div style="flex: 1;">
 <a> 
 Instruction Pointer (Befehlspointer)
@@ -113,28 +112,29 @@ Segment Registers (Segmentregister)
 <a href="">
     <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="Packaging status" align="right">
 </a>
+</div>
 
-<a>
-<strong> Status-Flag-Register </strong>
-EFLAGS/RFLAGS: 32-Bit-Register in 32-Bit-Systemen, 64-Bit-Register in 64-Bit-Systemen.
-Zero Flag (ZF): Zeigt an, wenn das Ergebnis der letzten Instruktion Null war. (ZF = 1 bei Ergebnis 0)
-Carry Flag (CF): Zeigt an, wenn die letzte Instruktion zu einem Überlauf oder Unterlauf geführt hat. (CF = 1 bei Überlauf)
-Sign Flag (SF): Zeigt an, ob das Ergebnis negativ ist oder das höchstwertige Bit gesetzt ist. (SF = 1 bei negativem Ergebnis)
-Trap Flag (TF): Aktiviert den Debugging-Modus, bei dem die CPU eine Instruktion nach der anderen ausführt. (Nützlich zum Debuggen)
-</a>
+<div style="flex: 1;">
+    <strong>Status-Flag-Register</strong>
+    <ul>
+        <li><strong>EFLAGS/RFLAGS</strong>: 32-Bit-Register in 32-Bit-Systemen, 64-Bit-Register in 64-Bit-Systemen.</li>
+        <li><strong>Zero Flag (ZF)</strong>: Zeigt an, wenn das Ergebnis der letzten Instruktion Null war. (ZF = 1 bei Ergebnis 0)</li>
+        <li><strong>Carry Flag (CF)</strong>: Zeigt an, wenn die letzte Instruktion zu einem Überlauf oder Unterlauf geführt hat. (CF = 1 bei Überlauf)</li>
+        <li><strong>Sign Flag (SF)</strong>: Zeigt an, ob das Ergebnis negativ ist oder das höchstwertige Bit gesetzt ist. (SF = 1 bei negativem Ergebnis)</li>
+        <li><strong>Trap Flag (TF)</strong>: Aktiviert den Debugging-Modus, bei dem die CPU eine Instruktion nach der anderen ausführt. (Nützlich zum Debuggen)</li>
+    </ul>
 
-<a href="">
-    <img src="img/trapFlag.png" alt="Packaging status" align="right">
-</a>
+    <a href="">
+        <img src="img/trapFlag.png" alt="Trap Flag" align="right">
+    </a>
 
-<a> <strong> Segment-Register</strong>
-Code Segment (CS): Zeigt auf den Code-Bereich im Speicher.
-Data Segment (DS): Zeigt auf den Datenbereich des Programms im Speicher.
-Stack Segment (SS): Zeigt auf den Stack des Programms im Speicher.
-Extra Segments (ES, FS, GS): Zeigen auf zusätzliche Datenbereiche und teilen den Speicher des Programms in vier verschiedene Datenabschnitte ein.
-</a>
-
-
+    <strong>Segment-Register</strong>
+    <ul>
+        <li><strong>Code Segment (CS)</strong>: Zeigt auf den Code-Bereich im Speicher.</li>
+        <li><strong>Data Segment (DS)</strong>: Zeigt auf den Datenbereich des Programms im Speicher.</li>
+        <li><strong>Stack Segment (SS)</strong>: Zeigt auf den Stack des Programms im Speicher.</li>
+        <li><strong>Extra Segments (ES, FS, GS)</strong>: Zeigen auf zusätzliche Datenbereiche und teilen den Speicher des Programms in vier verschiedene Datenabschnitte ein.</li>
+    </ul>
 
 </div>
 
