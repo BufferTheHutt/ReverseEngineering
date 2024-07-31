@@ -37,7 +37,7 @@ Willkommen im Repository für Ressourcen, die speziell für das Lernen und Anwen
 <details>
   <summary><strong>🛠️ Legale Übungsplattformen</strong></summary>
 
-  - **[Crackmes.de](https://crackmes.one/):**
+  - **[Crackmes.one](https://crackmes.one/):**
     - Eine Plattform, die einfache bis schwierige Crackmes bietet, um Reverse Engineering zu üben.
   - **[Pwnable.kr](http://pwnable.kr/):**
     - Ein Spielplatz für Exploit-Übungen und Herausforderungen im Bereich des Reverse Engineering.
@@ -45,6 +45,10 @@ Willkommen im Repository für Ressourcen, die speziell für das Lernen und Anwen
     - Eine Plattform mit einer Vielzahl von Hacking- und Reverse Engineering-Herausforderungen.
   - **[OverTheWire](https://overthewire.org/wargames/):**
     - Wargames zum Erlernen und Üben von Cybersecurity und Reverse Engineering-Fähigkeiten.
+  - **[Hack The Box](https://www.hackthebox.com/):**
+    - Eine Plattform mit virtuellen Maschinen, die gehackt werden müssen, ideal für Ethical Hacking und Reverse Engineering.
+  - **[TryHackMe](https://tryhackme.com/):**
+    - Interaktive, browserbasierte Lernplattform für Cybersicherheit, einschließlich Reverse Engineering-Challenges.
   - **[CTFtime](https://ctftime.org/):**
     - Informationen über bevorstehende Capture the Flag (CTF)-Events, die Reverse Engineering-Herausforderungen beinhalten.
 </details>
