@@ -24,9 +24,6 @@
     - 16-Bit: DX, 8-Bit: DH (hoch), DL (niedrig)
   - **ESP / RSP**: Stack Pointer, zeigt auf den Stack-Topp
     - 32-Bit (ESP), 64-Bit (RSP)
-    <a href="">
-    <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="Packaging status" align="right" width="275px">
-    </a>
   - **EBP / RBP**: Base Pointer, greift auf Parameter im Stack zu
     - 32-Bit (EBP), 64-Bit (RBP)
   - **ESI / RSI**: Source Index Register, verwendet für String-Operationen
@@ -35,6 +32,11 @@
     - 32-Bit (EDI), 64-Bit (RDI)
   - **R8-R15**: 64-Bit-Register, nur in 64-Bit-Systemen vorhanden
     - 32-Bit: R8D, 16-Bit: R8W, 8-Bit: R8B
+
+    <a href="">
+    <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="CPU Architektur" align="right" width="350px">
+    </a>
+
 </div>
 
 
