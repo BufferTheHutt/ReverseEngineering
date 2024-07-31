@@ -27,6 +27,8 @@ I developed a little starter script to enhance the UbuntuExperience.
 
 </details>
 
+
+<details>
 <summary>
 <b><u>Scripts 🔒</u></b>
 </summary>
