@@ -1,11 +1,10 @@
 # CPU Register in x86 und x64
 
-enable Flatpak and installl Extension-Manager first
+<div style="display: flex;">
 
-<a href="">
-    <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="Packaging status" align="right">
-</a>
 
+<div style="flex: 1;">
+<a> 
 Instruction Pointer (Befehlspointer)
 
     x86: EIP (Extended Instruction Pointer)
@@ -106,3 +105,13 @@ Segment Registers (Segmentregister)
 
     Verwendet, um Speichersegmente zu adressieren.
     Beispiele: CS (Code Segment), DS (Data Segment), SS (Stack Segment).
+
+</a>
+</div>
+<div style="flex: 1;">
+<a href="">
+    <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="Packaging status" align="right">
+</a>
+</div>
+
+</div>
