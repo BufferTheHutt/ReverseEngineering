@@ -107,11 +107,35 @@ Segment Registers (Segmentregister)
     Beispiele: CS (Code Segment), DS (Data Segment), SS (Stack Segment).
 
 </a>
+
 </div>
 <div style="flex: 1;">
 <a href="">
     <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="Packaging status" align="right">
 </a>
+
+<a>
+<strong> Status-Flag-Register </strong>
+EFLAGS/RFLAGS: 32-Bit-Register in 32-Bit-Systemen, 64-Bit-Register in 64-Bit-Systemen.
+Zero Flag (ZF): Zeigt an, wenn das Ergebnis der letzten Instruktion Null war. (ZF = 1 bei Ergebnis 0)
+Carry Flag (CF): Zeigt an, wenn die letzte Instruktion zu einem Überlauf oder Unterlauf geführt hat. (CF = 1 bei Überlauf)
+Sign Flag (SF): Zeigt an, ob das Ergebnis negativ ist oder das höchstwertige Bit gesetzt ist. (SF = 1 bei negativem Ergebnis)
+Trap Flag (TF): Aktiviert den Debugging-Modus, bei dem die CPU eine Instruktion nach der anderen ausführt. (Nützlich zum Debuggen)
+</a>
+
+<a href="">
+    <img src="img/trapFlag.png" alt="Packaging status" align="right">
+</a>
+
+<a> <strong> Segment-Register</strong>
+Code Segment (CS): Zeigt auf den Code-Bereich im Speicher.
+Data Segment (DS): Zeigt auf den Datenbereich des Programms im Speicher.
+Stack Segment (SS): Zeigt auf den Stack des Programms im Speicher.
+Extra Segments (ES, FS, GS): Zeigen auf zusätzliche Datenbereiche und teilen den Speicher des Programms in vier verschiedene Datenabschnitte ein.
+</a>
+
+
+
 </div>
 
 </div>
