@@ -152,7 +152,7 @@
 
 <div style="flex: 1;">
 <a href="">
-    <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="Packaging status" align="right" width="90px">
+    <img src="img/b3d7e425dae623de1ce2d57b25e4e809.png" alt="Packaging status" align="right" width="275px">
 </a>
 </div>
 
