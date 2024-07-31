@@ -78,4 +78,46 @@
     </div>
 </div>
 
+<div>
+
+# Speicherlayout eines Programms in Windows
+
+## Überblick
+
+- **Abstraktion des Speichers**
+  - Programme sehen eine abstrahierte Sicht des Speichers
+  - Zugriff auf den gesamten Speicher ist nicht möglich, nur auf den eigenen Bereich
+  - Details der Abstraktion werden hier nicht behandelt
+
+- **Typisches Speicherlayout**
+  - Speicher ist in verschiedene Sektionen unterteilt: Stack, Heap, Code und Data
+  - Die Reihenfolge kann variieren (z.B. Code kann unter Data liegen)
+
+## Sektionen im Speicher
+
+- **Code**
+  - Enthält den Programmcode (Text-Sektion in einer Portable Executable Datei)
+  - Hat Ausführungsrechte; CPU kann die Daten in diesem Abschnitt ausführen
+
+- **Data**
+  - Beinhaltet initialisierte, konstante Daten (Global-Variablen und andere unveränderliche Daten)
+  - Referenziert die Daten-Sektion in einer Portable Executable Datei
+
+- **Heap**
+  - Auch als dynamischer Speicher bekannt
+  - Beinhaltet Variablen und Daten, die während der Programmausführung erstellt und gelöscht werden
+  - Speicher wird zur Laufzeit zugewiesen und freigegeben
+
+- **Stack**
+  - Enthält lokale Variablen, übergebene Argumente und Rücksprungadressen
+  - Wichtiger Bereich für Malware-Analyse, da hier oft die Kontrolle durch Malware übernommen wird
+  - Details zu Buffer Overflows und Stack-Schutz werden in späteren Aufgaben behandelt
+
+<a href="">
+    <img src="img/52a0b7ce5d0fe5389e3d2f4ddd000de1.png" alt="Memory" align="right">
+</a>
+
+</div>
+
+
 </div>
