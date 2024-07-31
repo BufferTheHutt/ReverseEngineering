@@ -123,11 +123,12 @@ Segment Registers (Segmentregister)
         <li><strong>Sign Flag (SF)</strong>: Zeigt an, ob das Ergebnis negativ ist oder das höchstwertige Bit gesetzt ist. (SF = 1 bei negativem Ergebnis)</li>
         <li><strong>Trap Flag (TF)</strong>: Aktiviert den Debugging-Modus, bei dem die CPU eine Instruktion nach der anderen ausführt. (Nützlich zum Debuggen)</li>
     </ul>
-
+    <div>
     <a href="">
         <img src="img/trapFlag.png" alt="Trap Flag" align="right">
     </a>
-
+    </div>
+    <div>
     <strong>Segment-Register</strong>
     <ul>
         <li><strong>Code Segment (CS)</strong>: Zeigt auf den Code-Bereich im Speicher.</li>
@@ -135,7 +136,7 @@ Segment Registers (Segmentregister)
         <li><strong>Stack Segment (SS)</strong>: Zeigt auf den Stack des Programms im Speicher.</li>
         <li><strong>Extra Segments (ES, FS, GS)</strong>: Zeigen auf zusätzliche Datenbereiche und teilen den Speicher des Programms in vier verschiedene Datenabschnitte ein.</li>
     </ul>
-
+    </div>
 </div>
 
 </div>
