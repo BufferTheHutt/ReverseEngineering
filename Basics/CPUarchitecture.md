@@ -114,7 +114,58 @@
   - Details zu Buffer Overflows und Stack-Schutz werden in späteren Aufgaben behandelt
 
 <a href="">
-    <img src="img/52a0b7ce5d0fe5389e3d2f4ddd000de1.png" alt="Memory" align="right" width="370px">
+    <img src="img/52a0b7ce5d0fe5389e3d2f4ddd000de1.png" alt="Memory" align="center" width="370px">
+</a>
+
+</div>
+
+
+<div>
+
+# Überblick über den Stack in einem Programm
+
+## Was ist der Stack?
+
+- **Definition**
+  - Ein Teil des Programmspeichers
+  - Enthält lokale Variablen, Argumente und den Kontrollfluss des Programms
+  - Wichtiger Bereich für Malware-Analyse und Reverse Engineering
+
+## Funktionsweise des Stacks
+
+- **Prinzip**
+  - Last In First Out (LIFO): Das zuletzt hinzugefügte Element wird zuerst entfernt
+  - Beispiel: A, B, C auf den Stack legen → Entfernen in der Reihenfolge C, B, A
+
+- **Wichtige Register**
+  - **Stack Pointer (ESP / RSP)**
+    - Zeigt auf den aktuellen oberen Punkt des Stacks
+    - Passt sich beim Hinzufügen oder Entfernen von Elementen an
+  - **Base Pointer (EBP / RBP)**
+    - Bleibt konstant
+    - Referenzadresse für lokale Variablen und Argumente
+
+## Weitere Details
+
+- **Alter Base Pointer und Rücksprungadresse**
+  - Unter dem Base Pointer: Alter Base Pointer des aufrufenden Programms
+  - Darunter: Rücksprungadresse, die zeigt, wohin das Programm nach der Funktion zurückkehren soll
+  - Technik zur Kontrolle übernahme: Stack Buffer Overflow
+
+- **Argumente**
+  - Vor Funktionsstart auf den Stack gelegt
+  - Direkt unter der Rücksprungadresse
+
+- **Funktionsprolog und -epilog**
+  - **Prolog**
+    - Bereitet den Stack vor: Argumente, Rücksprungadresse und alter Base Pointer werden hinzugefügt
+    - Base Pointer wird auf den neuen Stack-Punkt gesetzt
+  - **Epilog**
+    - Alter Base Pointer und Rücksprungadresse werden wiederhergestellt
+    - Stack Pointer wird neu eingestellt
+
+<a href="">
+    <img src="img/aed105638dc28ee3524baeaba8925e12.png" alt="Memory" align="center" width="370px">
 </a>
 
 </div>
