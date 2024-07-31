@@ -2,149 +2,42 @@
 
 <div style="display: flex;">
 
-<div style="display: flex; flex-direction: column; gap: 10px;">
-    <div>
-        <strong>Instruction Pointer (Befehlspointer)</strong>
-        <div>
-            <strong>x86: EIP (Extended Instruction Pointer)</strong>
-            <p>32-bit Register</p>
-            <p>Zeigt auf die nächste auszuführende Anweisung</p>
-        </div>
-        <div>
-            <strong>x64: RIP (Register Instruction Pointer)</strong>
-            <p>64-bit Register</p>
-            <p>Erweitert für 64-bit Adressierung</p>
-        </div>
-    </div>
+<div style="flex: 1;">
+# CPU-Register Übersicht
 
-<div>
-        <strong>General-Purpose Registers (Allgemeine Register)</strong>
-        <div>
-            <strong>EAX / RAX (Accumulator)</strong>
-            <div>
-                <strong>x86: EAX</strong>
-                <p>32-bit Register</p>
-                <p>Speichert Ergebnisse von arithmetischen Operationen</p>
-                <p>Zugriffsmodi: 16-bit (AX), 8-bit (AH/AL)</p>
-            </div>
-            <div>
-                <strong>x64: RAX</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht EAX, aber mit erweiterter Größe</p>
-            </div>
-        </div>
-        <div>
-            <strong>EBX / RBX (Base Register)</strong>
-            <div>
-                <strong>x86: EBX</strong>
-                <p>32-bit Register</p>
-                <p>Häufig für Basisadressen verwendet</p>
-                <p>Zugriffsmodi: 16-bit (BX), 8-bit (BH/BL)</p>
-            </div>
-            <div>
-                <strong>x64: RBX</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht EBX, aber mit erweiterter Größe</p>
-            </div>
-        </div>
-        <div>
-            <strong>ECX / RCX (Counter Register)</strong>
-            <div>
-                <strong>x86: ECX</strong>
-                <p>32-bit Register</p>
-                <p>Wird oft für Schleifenzähler verwendet</p>
-                <p>Zugriffsmodi: 16-bit (CX), 8-bit (CH/CL)</p>
-            </div>
-            <div>
-                <strong>x64: RCX</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht ECX, aber mit erweiterter Größe</p>
-            </div>
-        </div>
-        <div>
-            <strong>EDX / RDX (Data Register)</strong>
-            <div>
-                <strong>x86: EDX</strong>
-                <p>32-bit Register</p>
-                <p>Häufig in Multiplikations- und Divisionsoperationen verwendet</p>
-                <p>Zugriffsmodi: 16-bit (DX), 8-bit (DH/DL)</p>
-            </div>
-            <div>
-                <strong>x64: RDX</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht EDX, aber mit erweiterter Größe</p>
-            </div>
-        </div>
-        <div>
-            <strong>ESP / RSP (Stack Pointer)</strong>
-            <div>
-                <strong>x86: ESP</strong>
-                <p>32-bit Register</p>
-                <p>Zeigt auf den obersten Wert des Stacks</p>
-            </div>
-            <div>
-                <strong>x64: RSP</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht ESP, aber für 64-bit Adressierung</p>
-            </div>
-        </div>
-        <div>
-            <strong>EBP / RBP (Base Pointer)</strong>
-            <div>
-                <strong>x86: EBP</strong>
-                <p>32-bit Register</p>
-                <p>Wird oft verwendet, um auf Funktionsparameter zuzugreifen</p>
-            </div>
-            <div>
-                <strong>x64: RBP</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht EBP, aber mit erweiterter Größe</p>
-            </div>
-        </div>
-        <div>
-            <strong>ESI / RSI (Source Index)</strong>
-            <div>
-                <strong>x86: ESI</strong>
-                <p>32-bit Register</p>
-                <p>Für String-Operationen und als Offset verwendet</p>
-            </div>
-            <div>
-                <strong>x64: RSI</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht ESI, aber mit erweiterter Größe</p>
-            </div>
-        </div>
-        <div>
-            <strong>EDI / RDI (Destination Index)</strong>
-            <div>
-                <strong>x86: EDI</strong>
-                <p>32-bit Register</p>
-                <p>Wird für Zieladressen bei String-Operationen verwendet</p>
-            </div>
-            <div>
-                <strong>x64: RDI</strong>
-                <p>64-bit Register</p>
-                <p>Entspricht EDI, aber mit erweiterter Größe</p>
-            </div>
-        </div>
-        <div>
-            <strong>R8-R15 (Zusätzliche Register in x64)</strong>
-            <p>Nur in x64:</p>
-            <p>64-bit Register, nicht vorhanden in 32-bit Systemen</p>
-            <p>Zugriffsmodi: 32-bit (R8D-R15D), 16-bit (R8W-R15W), 8-bit (R8B-R15B)</p>
-        </div>
-    </div>
+## Register-Typen
 
-<div>
-        <strong>Status Flag Registers (Statusregister)</strong>
-        <p>Enthalten verschiedene Flags, die den Zustand des Prozessors nach Operationen anzeigen, wie z.B. Zero Flag (ZF), Carry Flag (CF).</p>
-    </div>
+- **Instruction Pointer (IP / EIP / RIP)**
+  - Enthält die Adresse der nächsten auszuführenden Anweisung
+  - Ursprünglich 16-Bit (Intel 8086), 32-Bit (EIP) in 32-Bit-Systemen, 64-Bit (RIP) in 64-Bit-Systemen
 
- <div>
-        <strong>Segment Registers (Segmentregister)</strong>
-        <p>Verwendet, um Speichersegmente zu adressieren.</p>
-        <p>Beispiele: CS (Code Segment), DS (Data Segment), SS (Stack Segment).</p>
-</div>
+- **General-Purpose Registers (Allgemeine Register)**
+  - 32-Bit-Register in x86-Systemen, 64-Bit-Register in 64-Bit-Systemen
+  - **EAX / RAX**: Accumulator Register, speichert Ergebnisse arithmetischer Operationen
+    - 16-Bit: AX, 8-Bit: AL (niedrig), AH (hoch)
+  - **EBX / RBX**: Base Register, speichert Basisadresse für Offset-Referenzierung
+    - 16-Bit: BX, 8-Bit: BH (hoch), BL (niedrig)
+  - **ECX / RCX**: Counter Register, verwendet für Zähloperationen (z.B. Schleifen)
+    - 16-Bit: CX, 8-Bit: CH (hoch), CL (niedrig)
+  - **EDX / RDX**: Data Register, verwendet für Multiplikations- und Divisionsoperationen
+    - 16-Bit: DX, 8-Bit: DH (hoch), DL (niedrig)
+  - **ESP / RSP**: Stack Pointer, zeigt auf den Stack-Topp
+    - 32-Bit (ESP), 64-Bit (RSP)
+  - **EBP / RBP**: Base Pointer, greift auf Parameter im Stack zu
+    - 32-Bit (EBP), 64-Bit (RBP)
+  - **ESI / RSI**: Source Index Register, verwendet für String-Operationen
+    - 32-Bit (ESI), 64-Bit (RSI)
+  - **EDI / RDI**: Destination Index Register, verwendet für String-Operationen
+    - 32-Bit (EDI), 64-Bit (RDI)
+  - **R8-R15**: 64-Bit-Register, nur in 64-Bit-Systemen vorhanden
+    - 32-Bit: R8D, 16-Bit: R8W, 8-Bit: R8B
+
+## Hinweise
+
+- **Suffixe für Adressierung:** D = Double-word, W = Word, B = Byte
+
+
+
 </div>
 
 
