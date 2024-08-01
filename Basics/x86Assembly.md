@@ -18,3 +18,31 @@ Arten von Operanden:
 - Immediate Operands: Feste Werte, z.B. 0x5f. <br>
 - Register: Speicherorte im Prozessor, z.B. eax. <br>
 - Memory Operands: Speicherorte im RAM, z.B. [eax], wobei der Wert von eax die Adresse ist.
+
+## Allgemeine Anweisungen
+
+Instruktionen: Anweisungen sagen der CPU, welche Operationen auszuführen sind, oft unter Verwendung von Operanden aus Registern, Speicher oder direkten Werten.
+<br>
+
+MOV-Anweisung: Verschiebt Daten von einer Quelle zu einem Ziel. Beispiele:
+        mov eax, 0x5f: Verschiebt den festen Wert 0x5f in das Register eax.
+        mov ebx, eax: Verschiebt den Inhalt von eax nach ebx.
+        mov eax, [0x5fc53e]: Verschiebt den Wert an der Speicheradresse 0x5fc53e nach eax.
+        mov eax, [ebp+4]: Addiert 4 zu ebp und verschiebt den Wert der resultierenden Adresse nach eax.
+<br>
+
+ LEA-Anweisung: Load Effective Address speichert die Speicheradresse (nicht den Wert) in einem Register.
+        lea eax, [ebp+4]: Speichert die Adresse ebp+4 in eax.
+<br>
+
+NOP-Anweisung: No Operation führt keine Operation aus und wird oft verwendet, um CPU-Zyklen zu verbrauchen oder als Platzhalter für Shellcode (nop sled).
+<br>
+
+Shift-Anweisungen: Verschieben Bits in einem Register nach links oder rechts:
+        shr (shift right) und shl (shift left).
+        Beispiel: shl eax, 1 verschiebt die Bits in eax nach links, was einer Multiplikation mit 2 entspricht.
+<br>
+Rotate-Anweisungen: Ähnlich wie Shift, aber die Bits werden wieder an das andere Ende des Registers gedreht:
+        ror (rotate right) und rol (rotate left).
+        Beispiel: ror al, 1 dreht die Bits in al nach rechts, sodass das letzte Bit wieder an den Anfang gelangt.
+
