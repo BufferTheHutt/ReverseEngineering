@@ -61,7 +61,7 @@ Die `nop`-Anweisung (`No Operation`) führt keine Operation aus und wird oft ver
 Shift-Anweisungen verschieben Bits in einem Register nach links oder rechts:
 
 - `shr` (shift right) und `shl` (shift left).
-- Beispiel: `shl eax, 1` verschiebt die Bits in `eax` nach links, was einer Multiplikation mit 2 entspricht.
+- Beispiel: Wenn wir `00000010` in `eax` haben und nach links verschieben, wird es zu `00000100`. Das Carry-Flag (CF) wird verwendet, um die Zieladresse zu erweitern, indem es durch das letzte Bit gefüllt wird, das über das Ziel hinausläuft. Beispielsweise, wenn wir `00000101` in `eax` haben und es um 1 Bit nach rechts verschieben, wird das Ergebnis `00000010` in `eax` sein, und das Carry-Flag wird gesetzt, also auf 1.
 
 ## Rotate-Anweisungen
 
@@ -69,3 +69,4 @@ Die Rotate-Anweisungen sind ähnlich wie die Shift-Anweisungen, aber die Bits we
 
 - `ror` (rotate right) und `rol` (rotate left).
 - Beispiel: `ror al, 1` dreht die Bits in `al` nach rechts, sodass das letzte Bit wieder an den Anfang gelangt.
+
