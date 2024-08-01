@@ -65,8 +65,9 @@ Shift-Anweisungen verschieben Bits in einem Register nach links oder rechts:
 
 ## Rotate-Anweisungen
 
-Die Rotate-Anweisungen sind ähnlich wie die Shift-Anweisungen, aber die Bits werden wieder an das andere Ende des Registers gedreht:
+Rotate-Anweisungen sind ähnlich wie Shift-Anweisungen, aber die Bits werden an das andere Ende des Registers gedreht:
 
 - `ror` (rotate right) und `rol` (rotate left).
-- Beispiel: `ror al, 1` dreht die Bits in `al` nach rechts, sodass das letzte Bit wieder an den Anfang gelangt.
+- Beispiel: Wenn wir `10101010` in `al` haben und es um 1 Bit nach rechts rotieren, wird das Ergebnis `01010101` sein. Wenn wir dieses Ergebnis dann um 1 Bit nach links rotieren, erhalten wir wieder `10101010`.
+
 
